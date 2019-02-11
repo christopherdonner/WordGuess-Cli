@@ -11,27 +11,32 @@ function word(value) {
 
                 currentLetter.show()
                 // console.log(currentLetter)
+                // if(wordArray[i]===this.value)
                 wordArray.push(currentLetter)
                 // console.log(this.value[i])
             }
         }
 
     this.checkWord = function (guess) {
-        console.log(`things are working! ${wordArray[0].value}, ${wordArray[0].guessed}`)
-        console.log(`wordArray: ${wordArray.length}`)
         loop=wordArray.length
-        // if (this.wordArray) {
             for (i = 0; i < loop; i++) {
-                // console.log(wordArray[i].value + "test")
-                // console.log(`${guess}, ${wordArray[i].value}`)
                 if (guess === wordArray[i].value) {
-                    //   console.log(this.wordArray)
                     wordArray[i].guessed = true
-                    console.log(`${wordArray[i].value}, ${wordArray[i].guessed}`)
                     console.log("correct!")
+                    return;
+                }
+                else {
+                    console.log("incorrect")
                 }
             }
-        // }
+    }
+
+    this.drawWord=function(){
+        // console.log("drawWord")
+        for(i=0;i<wordArray.length; i++){
+            var currentLetter = new letterInclude.letter(wordArray[i].value, wordArray[i].guessed)
+            currentLetter.show()
+        }
     }
 }
 // }

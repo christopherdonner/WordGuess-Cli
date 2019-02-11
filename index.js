@@ -42,12 +42,13 @@ function prompt() {
     }]).then(function (input) {
       // console.log(input.guess)
       console.log(secretWord)
-      console.log(secretWord.value)
+      // console.log(secretWord.value)
     // secretWord = new wordInclude.word(currentWord)
     console.log()
     console.log(input.guess)
     secretWord.checkWord(input.guess)
-    secretWord.makeWord();  
+    // secretWord.makeWord();  
+    currentWord.drawWord();
     prompt();
   })
   
@@ -66,11 +67,12 @@ function prompt() {
 //     console.log(currentWord)
     
 
-// }
+// }w
 
 
 pickWord();
-console.log(wordInclude.word)
+// console.log(wordInclude.word)
   var currentWord= new wordInclude.word(currentWord)
   currentWord.makeWord();
+  // currentWord.drawWord();
   prompt();
