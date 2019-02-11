@@ -31,7 +31,7 @@ function pickWord() {
 
 // if(currentWord){
 // }
-// console.log(secretWord)
+console.log(secretWord)
 function prompt() {
   inquirer.prompt([
 
@@ -41,12 +41,12 @@ function prompt() {
       message: "Guess a letter"
     }]).then(function (input) {
       // console.log(input.guess)
-      // console.log(secretWord)
-      // console.log(secretWord.value)
+      console.log(secretWord)
+      console.log(secretWord.value)
     // secretWord = new wordInclude.word(currentWord)
     console.log()
     console.log(input.guess)
-    // secretWord.checkWord()
+    secretWord.checkWord(input.guess)
     secretWord.makeWord();  
     prompt();
   })
@@ -70,7 +70,7 @@ function prompt() {
 
 
 pickWord();
-// console.log(wordInclude.word)
+console.log(wordInclude.word)
   var currentWord= new wordInclude.word(currentWord)
   currentWord.makeWord();
   prompt();
