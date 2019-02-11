@@ -25,12 +25,13 @@ function pickWord() {
   wordPickerInt = Math.floor(Math.random() * wordsList.length);
   currentWord = wordsList[wordPickerInt]; //set as currentWord
   console.log(currentWord)
+  secretWord = new wordInclude.word(currentWord)
+  console.log(secretWord.value)
 }
 
-if(currentWord){
-  secretWord = new wordInclude.word(currentWord)
-}
-console.log(secretWord)
+// if(currentWord){
+// }
+// console.log(secretWord)
 function prompt() {
   inquirer.prompt([
 
@@ -39,14 +40,14 @@ function prompt() {
       name: "guess",
       message: "Guess a letter"
     }]).then(function (input) {
-      console.log(input.guess)
-      for(i=0;i<secretWord.length;i++){
-        console.log(wordInclude.wordArray[i]+"test")
-        if(input.guess===wordInclude.wordArray[i]){
-          wordInclude.wordArray[i].guessed=true
-        }
-      }
-    currentWord.makeWord();  
+      // console.log(input.guess)
+      // console.log(secretWord)
+      // console.log(secretWord.value)
+    // secretWord = new wordInclude.word(currentWord)
+    console.log()
+    console.log(input.guess)
+    // secretWord.checkWord()
+    secretWord.makeWord();  
     prompt();
   })
   
@@ -55,7 +56,7 @@ function prompt() {
 // wordInclude.pickWord();
 
 
-console.log(currentWord)
+// console.log(currentWord)
 //   // wordInclude.pickWord();
 //   function pickWord()
 // {
@@ -69,7 +70,7 @@ console.log(currentWord)
 
 
 pickWord();
-console.log(wordInclude.word)
+// console.log(wordInclude.word)
   var currentWord= new wordInclude.word(currentWord)
   currentWord.makeWord();
   prompt();

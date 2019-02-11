@@ -13,7 +13,7 @@ function letter (value, guessed, character)
             console.log("_")
         }
     }
-    this.check=function(character)
+    this.checkWord=function(character)
     {
         
         if(value===character){
