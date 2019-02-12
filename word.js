@@ -13,13 +13,17 @@ function word(value) {
         }
 
     this.checkWord = function (guess) {
-        loop=wordArray.length
-            for (i = 0; i < loop; i++) {
+        var counter
+            for (i = 0; i < wordArray.length; i++) {
                 if (guess === wordArray[i].value) {
                     wordArray[i].guessed = true
+                    counter++;
                     return;
                 }
             }
+        if(counter===wordArray.length){
+            
+        }
     }
 
     this.drawWord=function(){
