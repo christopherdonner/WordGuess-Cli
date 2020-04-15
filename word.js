@@ -22,7 +22,7 @@ function word(value) {
                 }
             }
         if(counter===wordArray.length){
-            
+            console.log("you win!")
         }
     }
 
@@ -33,7 +33,6 @@ function word(value) {
         }
     }
 }
-// }
 
 var tempWord = new word("test")
 
